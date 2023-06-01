@@ -34,7 +34,23 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/ndarray-base-prepend-singleton-dimensions
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
@@ -43,7 +59,7 @@ limitations under the License.
 <!-- eslint-disable id-length -->
 
 ```javascript
-import prependSingletonDimensions from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-prepend-singleton-dimensions@deno/mod.js';
+var prependSingletonDimensions = require( '@stdlib/ndarray-base-prepend-singleton-dimensions' );
 ```
 
 #### prependSingletonDimensions( x, n )
@@ -53,7 +69,7 @@ Returns an ndarray with a specified number of prepended singleton dimensions (i.
 <!-- eslint-disable id-length -->
 
 ```javascript
-import array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@deno/mod.js';
+var array = require( '@stdlib/ndarray-array' );
 
 // Create a 2x2 ndarray:
 var x = array( [ [ 1, 2 ], [ 3, 4 ] ] );
@@ -90,10 +106,10 @@ var sh = y.shape;
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@deno/mod.js';
-import numel from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-numel@deno/mod.js';
-import ind2sub from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ind2sub@deno/mod.js';
-import prependSingletonDimensions from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-prepend-singleton-dimensions@deno/mod.js';
+var array = require( '@stdlib/ndarray-array' );
+var numel = require( '@stdlib/ndarray-base-numel' );
+var ind2sub = require( '@stdlib/ndarray-ind2sub' );
+var prependSingletonDimensions = require( '@stdlib/ndarray-base-prepend-singleton-dimensions' );
 
 // Create a 2-dimensional array:
 var x = array( [ [ 1, 2 ], [ 3, 4 ] ] );
@@ -146,7 +162,7 @@ for ( i = 0; i < N; i++ ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
