@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2022 The Stdlib Authors.
@@ -16,16 +16,21 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
+
+import { ndarray } from '@stdlib/types/ndarray';
 
 /**
-* Prepend singleton dimensions.
+* Returns an array with a specified number of prepended singleton dimensions.
 *
-* @module @stdlib/ndarray-base-prepend-singleton-dimensions
+* @param x - input array
+* @param n - number of singleton dimensions to prepend
+* @returns output array
 *
 * @example
-* var array = require( '@stdlib/ndarray-array' );
-* var prependSingletonDimensions = require( '@stdlib/ndarray-base-prepend-singleton-dimensions' );
+* var array = require( `@stdlib/ndarray/array` );
 *
 * var x = array( [ [ 1, 2 ], [ 3, 4 ] ] );
 * // returns <ndarray>
@@ -51,12 +56,9 @@
 * v = y.get( 0, 0, 0, 1, 1 );
 * // returns 4
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function prependSingletonDimensions( x: ndarray, n: number ): ndarray;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = prependSingletonDimensions;
