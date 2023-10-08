@@ -1,5 +1,5 @@
-"use strict";var d=function(r,s){return function(){return s||r((s={exports:{}}).exports,s),s.exports}};var p=d(function(l,u){
-var f=require('@stdlib/ndarray-base-assert-is-read-only/dist');function h(r,s){var t,a,n,o,i,e;for(n=r.shape,o=r.strides,i=n.length,t=[],a=[],e=0;e<s;e++)a.push(1),t.push(o[0]);for(e=0;e<i;e++)a.push(n[e]),t.push(o[e]);return f(r)?new r.constructor(r.dtype,r.data,a,t,r.offset,r.order,{readonly:!0}):new r.constructor(r.dtype,r.data,a,t,r.offset,r.order)}u.exports=h
-});var v=p();module.exports=v;
+"use strict";var q=function(r,t){return function(){return t||r((t={exports:{}}).exports,t),t.exports}};var h=q(function(S,g){
+var c=require('@stdlib/ndarray-base-assert-is-read-only/dist'),v=require('@stdlib/ndarray-base-dtype/dist'),d=require('@stdlib/ndarray-base-shape/dist'),l=require('@stdlib/ndarray-base-strides/dist'),o=require('@stdlib/ndarray-base-offset/dist'),p=require('@stdlib/ndarray-base-order/dist'),f=require('@stdlib/ndarray-base-data-buffer/dist');function y(r,t){var s,a,i,u,n,e;for(i=d(r,!1),u=l(r,!1),n=i.length,s=[],a=[],e=0;e<t;e++)a.push(1),s.push(u[0]);for(e=0;e<n;e++)a.push(i[e]),s.push(u[e]);return c(r)?new r.constructor(v(r),f(r),a,s,o(r),p(r),{readonly:!0}):new r.constructor(v(r),f(r),a,s,o(r),p(r))}g.exports=y
+});var D=h();module.exports=D;
 /** @license Apache-2.0 */
 //# sourceMappingURL=index.js.map
