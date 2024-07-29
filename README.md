@@ -54,7 +54,7 @@ limitations under the License.
 <!-- eslint-disable id-length -->
 
 ```javascript
-import prependSingletonDimensions from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-prepend-singleton-dimensions@deno/mod.js';
+import prependSingletonDimensions from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-prepend-singleton-dimensions@v0.2.2-deno/mod.js';
 ```
 
 #### prependSingletonDimensions( x, n )
@@ -104,7 +104,7 @@ var sh = y.shape;
 import array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@deno/mod.js';
 import numel from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-numel@deno/mod.js';
 import ind2sub from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ind2sub@deno/mod.js';
-import prependSingletonDimensions from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-prepend-singleton-dimensions@deno/mod.js';
+import prependSingletonDimensions from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-prepend-singleton-dimensions@v0.2.2-deno/mod.js';
 
 // Create a 2-dimensional array:
 var x = array( [ [ 1, 2 ], [ 3, 4 ] ] );
