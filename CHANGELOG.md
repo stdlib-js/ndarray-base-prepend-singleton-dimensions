@@ -4,7 +4,17 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-05-26)
+## Unreleased (2025-12-30)
+
+<section class="features">
+
+### Features
+
+-   [`7473138`](https://github.com/stdlib-js/stdlib/commit/7473138141acc4be120535f84160d49f836b86be) - add writable parameter to `ndarray/base/prepend-singleton-dimensions` [(#9426)](https://github.com/stdlib-js/stdlib/pull/9426)
+
+</section>
+
+<!-- /.features -->
 
 <section class="commits">
 
@@ -12,6 +22,7 @@
 
 <details>
 
+-   [`7473138`](https://github.com/stdlib-js/stdlib/commit/7473138141acc4be120535f84160d49f836b86be) - **feat:** add writable parameter to `ndarray/base/prepend-singleton-dimensions` [(#9426)](https://github.com/stdlib-js/stdlib/pull/9426) _(by Muhammad Haris)_
 -   [`2c4e5d8`](https://github.com/stdlib-js/stdlib/commit/2c4e5d824e0c5dc8fd536bf79ff565cee100ce46) - **build:** disable additional lint rule in TS tests _(by Philipp Burckhardt)_
 
 </details>
@@ -24,8 +35,9 @@
 
 ### Contributors
 
-A total of 1 person contributed to this release. Thank you to this contributor:
+A total of 2 people contributed to this release. Thank you to the following contributors:
 
+-   Muhammad Haris
 -   Philipp Burckhardt
 
 </section>
