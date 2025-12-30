@@ -45,7 +45,25 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/ndarray-base-prepend-singleton-dimensions
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
@@ -53,35 +71,11 @@ limitations under the License.
 
 <!-- eslint-disable id-length -->
 
-To use in Observable,
-
 ```javascript
-prependSingletonDimensions = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-prepend-singleton-dimensions@umd/browser.js' )
+var prependSingletonDimensions = require( '@stdlib/ndarray-base-prepend-singleton-dimensions' );
 ```
 
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var prependSingletonDimensions = require( 'path/to/vendor/umd/ndarray-base-prepend-singleton-dimensions/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-prepend-singleton-dimensions@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.prependSingletonDimensions;
-})();
-</script>
-```
-
-#### prependSingletonDimensions( x, n )
+#### prependSingletonDimensions( x, n, writable )
 
 Returns an ndarray with a specified number of prepended singleton dimensions (i.e., dimensions whose size is equal to `1`).
 
@@ -92,15 +86,18 @@ var array = require( '@stdlib/ndarray-array' );
 
 // Create a 2x2 ndarray:
 var x = array( [ [ 1, 2 ], [ 3, 4 ] ] );
-// returns <ndarray>
+// returns <ndarray>[ [ 1, 2 ], [ 3, 4 ] ]
 
 // Prepend singleton dimensions:
-var y = prependSingletonDimensions( x, 3 );
-// returns <ndarray>
-
-var sh = y.shape;
-// returns [ 1, 1, 1, 2, 2 ]
+var y = prependSingletonDimensions( x, 3, false );
+// returns <ndarray>[ [ [ [ 1, 2 ] ], [ [ 3, 4 ] ] ] ]
 ```
+
+The function accepts the following arguments:
+
+-   **x**: input ndarray.
+-   **n**: number of singleton dimensions to prepend.
+-   **writable**: boolean indicating whether a returned ndarray should be writable.
 
 </section>
 
@@ -124,42 +121,16 @@ var sh = y.shape;
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-numel@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ind2sub@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-prepend-singleton-dimensions@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var uniform = require( '@stdlib/random-uniform' );
+var ndarray2array = require( '@stdlib/ndarray-to-array' );
+var prependSingletonDimensions = require( '@stdlib/ndarray-base-prepend-singleton-dimensions' );
 
-// Create a 2-dimensional array:
-var x = array( [ [ 1, 2 ], [ 3, 4 ] ] );
-// returns <ndarray>
+var x = uniform( [ 3, 3, 3 ], -10.0, 10.0 );
+console.log( ndarray2array( x ) );
 
-// Prepend singleton dimensions:
-var y = prependSingletonDimensions( x, 3 );
-// returns <ndarray>
-
-// Retrieve the shape:
-var sh = y.shape;
-// returns [ 1, 1, 1, 2, 2 ]
-
-// Retrieve the number of elements:
-var N = numel( sh );
-
-// Loop through the array elements...
-var i;
-for ( i = 0; i < N; i++ ) {
-    console.log( 'Y[%s] = %d', ind2sub( sh, i ).join( ', ' ), y.iget( i ) );
-}
-
-})();
-</script>
-</body>
-</html>
+var y = prependSingletonDimensions( x, 3, false );
+console.log( ndarray2array( y ) );
 ```
 
 </section>
@@ -234,8 +205,8 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 -->
 
-[chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
+[chat-image]: https://img.shields.io/badge/zulip-join_chat-brightgreen.svg
+[chat-url]: https://stdlib.zulipchat.com
 
 [stdlib]: https://github.com/stdlib-js/stdlib
 
