@@ -45,7 +45,25 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/ndarray-base-prepend-singleton-dimensions
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
@@ -54,7 +72,7 @@ limitations under the License.
 <!-- eslint-disable id-length -->
 
 ```javascript
-import prependSingletonDimensions from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-prepend-singleton-dimensions@deno/mod.js';
+var prependSingletonDimensions = require( '@stdlib/ndarray-base-prepend-singleton-dimensions' );
 ```
 
 #### prependSingletonDimensions( x, n, writable )
@@ -64,7 +82,7 @@ Returns an ndarray with a specified number of prepended singleton dimensions (i.
 <!-- eslint-disable id-length -->
 
 ```javascript
-import array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@deno/mod.js';
+var array = require( '@stdlib/ndarray-array' );
 
 // Create a 2x2 ndarray:
 var x = array( [ [ 1, 2 ], [ 3, 4 ] ] );
@@ -104,9 +122,9 @@ The function accepts the following arguments:
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-uniform@deno/mod.js';
-import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@deno/mod.js';
-import prependSingletonDimensions from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-prepend-singleton-dimensions@deno/mod.js';
+var uniform = require( '@stdlib/random-uniform' );
+var ndarray2array = require( '@stdlib/ndarray-to-array' );
+var prependSingletonDimensions = require( '@stdlib/ndarray-base-prepend-singleton-dimensions' );
 
 var x = uniform( [ 3, 3, 3 ], -10.0, 10.0 );
 console.log( ndarray2array( x ) );
@@ -144,7 +162,7 @@ console.log( ndarray2array( y ) );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -161,7 +179,7 @@ See [LICENSE][stdlib-license].
 
 ## Copyright
 
-Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
+Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 </section>
 
@@ -174,8 +192,8 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/ndarray-base-prepend-singleton-dimensions.svg
 [npm-url]: https://npmjs.org/package/@stdlib/ndarray-base-prepend-singleton-dimensions
 
-[test-image]: https://github.com/stdlib-js/ndarray-base-prepend-singleton-dimensions/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/ndarray-base-prepend-singleton-dimensions/actions/workflows/test.yml?query=branch:main
+[test-image]: https://github.com/stdlib-js/ndarray-base-prepend-singleton-dimensions/actions/workflows/test.yml/badge.svg?branch=v0.3.0
+[test-url]: https://github.com/stdlib-js/ndarray-base-prepend-singleton-dimensions/actions/workflows/test.yml?query=branch:v0.3.0
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/ndarray-base-prepend-singleton-dimensions/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/ndarray-base-prepend-singleton-dimensions?branch=main
