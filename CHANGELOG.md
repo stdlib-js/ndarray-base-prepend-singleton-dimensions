@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-02-28)
+## Unreleased (2026-03-29)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`29648e3`](https://github.com/stdlib-js/stdlib/commit/29648e3c22b94656db3d56f822718f5860dfba9d) - **refactor:** improve type specificity _(by Athan Reines)_
 -   [`e9054b2`](https://github.com/stdlib-js/stdlib/commit/e9054b2892ab8d483449efd9b78aaed53c6fcb2b) - **docs:** add note _(by Athan Reines)_
 
 </details>
